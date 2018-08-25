@@ -3,7 +3,9 @@ var bodyParser = require("body-parser");
 var path = require("path");
 
 var app = express();
-var PORT = 8081;
+
+//ALY NEEDED TO WORK ON HEROKU
+var PORT = process.env.PORT || 8081;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
